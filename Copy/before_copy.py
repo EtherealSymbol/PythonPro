@@ -1,6 +1,7 @@
 import openpyxl
 
-if __name__ == '__main__':
+
+def extract_second():
     wb = openpyxl.load_workbook("产品成本计算单查询 - 副本.xlsx", data_only=True)
     # active获得的是sheet1
     # ws = wb.active
@@ -46,11 +47,18 @@ if __name__ == '__main__':
             s_dj = i
         elif first_row[i-1].value == '金额' and s_je == -1:
             s_je = i
-    print(s_wl, s_gg, s_dw, s_tr_sl, s_tr_je, s_sl, s_dj, s_je)
-
-
+    # print(s_wl, s_gg, s_dw, s_tr_sl, s_tr_je, s_sl, s_dj, s_je)
+    dict_second = {'s_wl': s_wl,
+                   's_gg': s_gg,
+                   's_dw': s_dw,
+                   's_tr_sl': s_tr_sl,
+                   's_tr_je': s_sl,
+                   's_sl': s_sl,
+                   's_dj': s_dj,
+                   's_je': s_je}
 
     wb.close()
+    return dict_second
 
 
 
