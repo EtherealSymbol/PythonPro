@@ -64,6 +64,13 @@ def extract_data_to_dict_fun(file_name, the_sheet_name):
     '''
     字典数据提取完毕
     '''
+    return dict_all
 
+
+# if __name__ == '__main__':
+    # dict_compare = extract_data_to_dict_fun("2021年07月小针成本指标表.xls", "2021.07与预算")
+    # print(dict_compare)
+    # for key in dict_compare:
+        # print(key, dict_compare[key])
 
 
