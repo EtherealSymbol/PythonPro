@@ -3,10 +3,10 @@ import openpyxl
 from data_process import extract_num
 from openpyxl.styles import colors, PatternFill
 
-wb = openpyxl.load_workbook("混悬剂.xlsx", data_only=True)
-# ws = wb["混悬剂GMP认证"]
-ws = wb["混悬剂许可证"]
-# wb = openpyxl.load_workbook("西林瓶认证厂家.xlsx", data_only=True)
+wb = openpyxl.load_workbook("西林瓶认证厂家.xlsx", data_only=True)
+# wb = openpyxl.load_workbook("混悬剂.xlsx", data_only=True)
+ws = wb["混悬剂GMP"]
+# ws = wb["混悬剂许可证"]
 
 # ws = wb["小容量注射剂GMP证书"]
 # ws = wb["小容量注射剂许可证"]
@@ -59,8 +59,8 @@ for rowNumber in range(1, ws.max_row + 1):
     # print(key, dict.get(key))
 
 # 改变
-ws1 = wb["混悬剂GMP认证"]
-# ws1 = wb["混悬剂许可证"]
+# ws1 = wb["混悬剂GMP"]
+ws1 = wb["混悬剂许可证"]
 # ws1 = wb["小容量注射剂许可证"]
 
 # ws1 = wb["冻干粉许可证"]
@@ -82,4 +82,5 @@ for rowNumber1 in range(1, ws1.max_row + 1):
             yellow_fill = PatternFill(fill_type='solid', fgColor="FFff00")
             ws1.row_dimensions[rowNumber1].fill = yellow_fill
 print(num)
-wb.save('混悬剂.xlsx')  # 保存数据
+# wb.save('混悬剂.xlsx')  # 保存数据
+wb.save('西林瓶认证厂家.xlsx')
