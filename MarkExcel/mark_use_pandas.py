@@ -7,14 +7,9 @@ from xlutils.copy import copy
 from data_process import extract_num
 
 
-
-
-
-
 if __name__ == '__main__':
     file_name = '表 - 副本.xls'
     df = pd.read_excel(file_name)
-
 
     rb = xlrd.open_workbook(file_name)
     sh = rb.sheets()[0]
