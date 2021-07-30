@@ -52,7 +52,7 @@ def extract_second():
                    's_gg': s_gg,
                    's_dw': s_dw,
                    's_tr_sl': s_tr_sl,
-                   's_tr_je': s_sl,
+                   's_tr_je': s_tr_je,
                    's_sl': s_sl,
                    's_dj': s_dj,
                    's_je': s_je}
