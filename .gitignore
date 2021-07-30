@@ -26,4 +26,4 @@ hs_err_pid*
 .idea
 venv
 *.pyc
-_init_.py
+__init__.py
